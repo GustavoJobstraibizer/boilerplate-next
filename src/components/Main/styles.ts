@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styled from 'styled-components'
 
 export const Wrapper = styled.main`
@@ -12,7 +13,7 @@ export const Wrapper = styled.main`
   flex-direction: column;
   padding: 3rem;
 `
-export const Logo = styled.img`
+export const Logo = styled(Image)`
   width: 25rem;
   margin-bottom: 2rem;
 `
@@ -26,7 +27,7 @@ export const Description = styled.h2`
   font-weight: 400;
 `
 
-export const Illustration = styled.img`
+export const Illustration = styled(Image)`
   margin: 3rem;
   width: min(30rem, 100%);
 `
