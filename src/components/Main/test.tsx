@@ -6,8 +6,16 @@ describe('Main', () => {
     const { container } = render(<Main />)
 
     expect(screen.getByTestId('main')).toBeInTheDocument()
-    expect(screen.getByText(/Hello world/i)).toBeInTheDocument()
+    expect(screen.getByText(/React Avançado/i)).toBeInTheDocument()
 
     expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it('should render colors correctly', () => {
+    const { container } = render(<Main />)
+
+    expect(container.firstChild).toHaveStyle({
+      'background-color': '#06092b'
+    })
   })
 })
